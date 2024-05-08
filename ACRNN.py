@@ -7,7 +7,7 @@ Created on Thu May  2 12:35:40 2024
 
 #Import image
 from skimage import io
-image_X = io.imread('path to iamge') 
+image_X = io.imread('path to image') 
 
 #Split into Train & Test set
 X_train = image_X[0:102]#80% train
