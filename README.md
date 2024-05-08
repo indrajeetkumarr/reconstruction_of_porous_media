@@ -12,5 +12,4 @@ Reconstruction of reservoir rock using attention-based convolutional recurrent n
 Deaprtment of Chemical Engineering, IIT Guwahati, Guwahati, Assam-781039, India.
 Email: indrajeet.kumar@iitg.ac.in; anugrah@iitg.ac.in
 
-#Steps to USE
-1. 
+
