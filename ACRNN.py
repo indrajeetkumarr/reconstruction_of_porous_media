@@ -5,12 +5,13 @@ Created on Thu May  2 12:35:40 2024
 @author: CHL
 """
 
-import cv2 as cv
+#Import image
 from skimage import io
-trainX_SM = io.imread('E:/INdrajeet/SandyMedium/REV size of SM/REV_128.tiff') 
-cv.imshow('Original', trainX_SM[50])
-from sklearn.model_selection import train_test_split
-X_train_SM, X_test_SM, y_train_SM, y_test_SM = train_test_split(trainX_SM, trainX_SM, test_size=0.20, shuffle=True)  
+image_X = io.imread('path to iamge') 
+
+#Split into Train & Test set
+X_train = image_X[0:102]
+y_train = image_X[102:]
 from keras.models import Model
 from keras.layers import Input, Conv2D, MaxPooling2D, Flatten, LSTM, Dense, Reshape, UpSampling2D, Dropout, Permute, BatchNormalization
 from attention import Attention
@@ -52,6 +53,6 @@ opt = Adam(lr=0.001,  beta_1 = 0.5)
 # Compile model
 model.compile(optimizer=opt, loss='mse', metrics=['accuracy'])
 model.summary()
-history = model.fit(X_train_SM, y_train_SM, batch_size = 4, epochs=500, validation_data = (X_test_SM))
+history = model.fit(X_train, y_train, batch_size = 4, epochs=500)
 dt = time.time() - t
 print("Model Solved in {} ".format(dt) + " secs \n")
