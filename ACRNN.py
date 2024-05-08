@@ -10,8 +10,8 @@ from skimage import io
 image_X = io.imread('path to iamge') 
 
 #Split into Train & Test set
-X_train = image_X[0:102]
-y_train = image_X[102:]
+X_train = image_X[0:102]#80% train
+y_train = image_X[102:]#20% Test
 from keras.models import Model
 from keras.layers import Input, Conv2D, MaxPooling2D, Flatten, LSTM, Dense, Reshape, UpSampling2D, Dropout, Permute, BatchNormalization
 from attention import Attention
