@@ -51,7 +51,7 @@ outputs = Conv2D(1, kernel_size=(3, 3),strides = (1,1), activation='relu', paddi
 model = Model(inputs=inputs, outputs=outputs)
 opt = Adam(lr=0.001,  beta_1 = 0.5)
 # Compile model
-model.compile(optimizer=opt, loss='mse', metrics=['accuracy'])
+model.compile(optimizer=opt, loss='mse')
 model.summary()
 history = model.fit(X_train, y_train, batch_size = 4, epochs=500)
 dt = time.time() - t
