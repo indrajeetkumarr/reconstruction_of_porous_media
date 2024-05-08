@@ -2,7 +2,7 @@
 """
 Created on Thu May  2 12:35:40 2024
 
-@author: CHL
+@author: Indrajeet_Kumar
 """
 
 #Import image
